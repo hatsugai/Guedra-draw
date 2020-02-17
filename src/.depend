@@ -1,0 +1,16 @@
+draw.cmo : drawModel.cmo
+draw.cmx : drawModel.cmx
+drawModel.cmo : setx.cmo mapx.cmo
+drawModel.cmx : setx.cmx mapx.cmx
+figConn.cmo : drawModel.cmo draw.cmo
+figConn.cmx : drawModel.cmx draw.cmx
+figConnLabel.cmo : figConn.cmo drawModel.cmo draw.cmo
+figConnLabel.cmx : figConn.cmx drawModel.cmx draw.cmx
+figRect.cmo : figConn.cmo drawModel.cmo draw.cmo
+figRect.cmx : figConn.cmx drawModel.cmx draw.cmx
+mapx.cmo :
+mapx.cmx :
+setx.cmo :
+setx.cmx :
+test_draw.cmo : figRect.cmo figConnLabel.cmo drawModel.cmo draw.cmo
+test_draw.cmx : figRect.cmx figConnLabel.cmx drawModel.cmx draw.cmx
