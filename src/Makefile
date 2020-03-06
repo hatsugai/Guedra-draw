@@ -11,7 +11,7 @@ CC=gcc
 CXX=g++
 WINBASE=win-gtk
 EXE=
-CFLAGS = -g -O0
+CFLAGS=
 INCLUDE=`pkg-config --cflags gtk+-3.0`
 LDFLAGS=`pkg-config --libs gtk+-3.0` -lasmrun -lunix -ldl -lm
 
@@ -25,7 +25,7 @@ CC=gcc
 CXX=g++
 WINBASE=win-gtk
 EXE=
-CFLAGS = -g -O0
+CFLAGS=
 INCLUDE=`pkg-config --cflags gtk+-3.0`
 LDFLAGS=`pkg-config --libs gtk+-3.0` -lasmrun -lunix -ldl -lm
 
@@ -38,7 +38,7 @@ CC=x86_64-w64-mingw32-gcc
 CXX=x86_64-w64-mingw32-g++
 WINBASE=win-d2d
 EXE=.exe
-CFLAGS = -g -O0 -D_UNICODE -DUNICODE
+CFLAGS=-D_UNICODE -DUNICODE
 LDFLAGS=-lasmrun -lunix -lm -ld2d1 -ldwrite
 
 endif
