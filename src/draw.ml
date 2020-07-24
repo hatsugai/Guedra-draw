@@ -13,6 +13,8 @@ type ('a, 'b, 'c) context = {
     oz : oz;
   }
 
+let color_selectbox = color 0.0 1.0 0.0
+
 let draw_handle x y =
   set_color o_o.color_handle;
   fill_rect
@@ -265,7 +267,7 @@ let init wch pch cch nch ext =
           (flo (cc.oz.oy + y1 - y0)) cc.oz.scale
      | CapSelect ((x0, y0), (x1, y1), tsel) ->
         push_translate_scale (flo cc.oz.ox) (flo cc.oz.oy) cc.oz.scale;
-        set_color color_black;
+        set_color color_selectbox;
         draw_rect x0 y0 (x1 -. x0) (y1 -. y0)
      | CapMove _ ->
         push_translate_scale (flo cc.oz.ox) (flo cc.oz.oy) cc.oz.scale);
